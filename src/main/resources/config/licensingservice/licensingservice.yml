@@ -1,15 +1,17 @@
 example:
   property: "I AM IN THE DEFAULT"
+
 spring:
   application:
     name: "licensingservice"
     profiles:
       active: default
-    cloud:
-      config: "uri: http://localhost:8888"
+  cloud:
+    config:
+      uri: http://localhost:8888
   jpa:
     database: "POSTGRESQL"
-    show-sql: "true"
+    show-sql: true
     properties:
       hibernate:
         dialect: "org.hibernate.dialect.PostgreSQLDialect"
@@ -19,13 +21,15 @@ spring:
     url: "jdbc:postgresql://localhost:5432/eagle_eye_local"
     username: "postgres"
     password: "admin"
-    testWhileIdle: "true"
+    testWhileIdle: true
     validationQuery: "SELECT 1"
   sql:
     init:
       mode: always
+
 redis:
   server: "redis"
   port: "6379"
+
 signing:
   key: "345345fsdfsf5345"
