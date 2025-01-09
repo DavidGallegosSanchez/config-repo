@@ -1,17 +1,17 @@
 ####
 #Configuration server with Git
 ####
-server:
-  port: 8888
-spring:
-  cloud:
-    config:
-      server:
-        encrypt.enabled: false
-        git:
-          uri: https://github.com/DavidGallegosSanchez/config-repo
-          searchPaths: licensingservice,organizationservice
-          clone-on-start: true
+#server:
+#  port: 8888
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        encrypt.enabled: false
+#        git:
+#          uri: https://github.com/DavidGallegosSanchez/config-repo
+#          searchPaths: licensingservice,organizationservice
+#          clone-on-start: true
           #username: native-cloud-apps
           #password: Offended
 
@@ -19,17 +19,17 @@ spring:
 #Classpath and file-based solution
 ####
 
-#server:
-#  port: 8888
-#spring:
-#  profiles:
-#    active: native
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          searchLocations: file:///Users/dagal/Projects/configuration-server/src/main/resources/config/licensingservice, file:///Users/dagal/Projects/configuration-server/src/main/resources/config/organizationservice
-#encrypt:
-#  key: IMSYMMETRIC
+server:
+  port: 8888
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: file:///Users/dagal/Projects/configuration-server/src/main/resources/config/licensingservice, file:///Users/dagal/Projects/configuration-server/src/main/resources/config/organizationservice
+encrypt:
+  key: IMSYMMETRIC
 
 
