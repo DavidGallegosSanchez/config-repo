@@ -1,6 +1,12 @@
 example:
   property: "I AM IN THE DEFAULT"
 spring:
+  application:
+    name: "licensingservice"
+    profiles:
+      active: default
+    cloud:
+      config: "uri: http://localhost:8888"
   jpa:
     database: "POSTGRESQL"
     show-sql: "true"
@@ -10,7 +16,7 @@ spring:
   datasource:
     platform: "postgres"
     driverClassName: "org.postgresql.Driver"
-    url: "jdbc:postgresql://postgresql:5432/eagle_eye_local"
+    url: "jdbc:postgresql://localhost:5432/eagle_eye_local"
     username: "postgres"
     password: "admin"
     testWhileIdle: "true"
