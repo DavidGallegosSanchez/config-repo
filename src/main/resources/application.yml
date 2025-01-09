@@ -11,7 +11,7 @@ spring:
           uri: https://github.com/DavidGallegosSanchez/config-repo/
           searchPaths: licensingservice,organizationservice
           username: native-cloud-apps
-          password: 0ffended
+          password: Offended
 
 ####
 #Classpath and file-based solution
