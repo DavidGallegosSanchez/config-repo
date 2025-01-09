@@ -2,13 +2,6 @@ example:
   property: "I AM IN THE DEFAULT"
 
 spring:
-  application:
-    name: "licensingservice"
-    profiles:
-      active: default
-  cloud:
-    config:
-      uri: https://github.com/DavidGallegosSanchez/config-repo/blob/main/src/main/resources/config/licensingservice/licensingservice.yml
   jpa:
     database: "POSTGRESQL"
     show-sql: true
@@ -20,7 +13,7 @@ spring:
     driverClassName: "org.postgresql.Driver"
     url: "jdbc:postgresql://localhost:5432/eagle_eye_local"
     username: "postgres"
-    password: "admin"
+    password: "{cipher}ed45a0899d27931e7104d05250ab13fd1901cecdfa7b9a8555c1cb8d9177a90d"
     testWhileIdle: true
     validationQuery: "SELECT 1"
   sql:
